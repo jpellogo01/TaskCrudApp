@@ -8,8 +8,14 @@ interface TasklistProps {
   tasks: Tasks[];
   setEditingTask: React.Dispatch<React.SetStateAction<Tasks | null>>;
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleStatus: (id: number) => void;
 }
-const TaskList = ({ tasks, setEditingTask, setShowModal }: TasklistProps) => {
+const TaskList = ({
+  tasks,
+  setEditingTask,
+  setShowModal,
+  toggleStatus,
+}: TasklistProps) => {
   return (
     <div>
       <h4>Task Lists:</h4>
@@ -19,6 +25,7 @@ const TaskList = ({ tasks, setEditingTask, setShowModal }: TasklistProps) => {
           task={task}
           setEditingTask={setEditingTask}
           setShowModal={setShowModal}
+          toggleStatus={toggleStatus}
         />
       ))}
     </div>

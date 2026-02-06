@@ -32,6 +32,14 @@ const Task = () => {
     loadTasks();
   }, []);
 
+  const toggleStatus = (id: number) => {
+    const updatedTask = tasks.map((task) =>
+      task.id === id ? { ...task, completed: !task.completed } : task,
+    );
+    setTasks(updatedTask);
+    localStorage.setItem("task", JSON.stringify(updatedTask));
+  };
+
   return (
     <div>
       <h3>Task App</h3>
@@ -61,6 +69,7 @@ const Task = () => {
         tasks={tasks}
         setEditingTask={setEditingTask}
         setShowModal={setShowModal}
+        toggleStatus={toggleStatus}
       />
     </div>
   );

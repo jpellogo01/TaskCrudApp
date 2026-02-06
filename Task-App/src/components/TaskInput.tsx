@@ -41,7 +41,7 @@ const TaskInput = ({
       const newTask: Task = {
         id: Date.now(),
         title,
-        completed: false,
+        completed: true,
       };
 
       setTasks([...tasks, newTask]);
