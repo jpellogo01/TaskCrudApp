@@ -37,7 +37,15 @@ const Task = () => {
       task.id === id ? { ...task, completed: !task.completed } : task,
     );
     setTasks(updatedTask);
-    localStorage.setItem("task", JSON.stringify(updatedTask));
+    localStorage.setItem("tasks", JSON.stringify(updatedTask));
+  };
+
+  const deleteTasks = () => {
+    setTasks((prev) => {
+      const updated = prev.filter((tasks) => !tasks.completed);
+      localStorage.setItem("tasks", JSON.stringify(updated));
+      return updated;
+    });
   };
 
   return (
@@ -71,6 +79,8 @@ const Task = () => {
         setShowModal={setShowModal}
         toggleStatus={toggleStatus}
       />
+
+      <button onClick={deleteTasks}>Delete all Compelted Tasks</button>
     </div>
   );
 };
