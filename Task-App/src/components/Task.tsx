@@ -49,8 +49,8 @@ const Task = () => {
   };
 
   return (
-    <div>
-      <h3>Task App</h3>
+    <div className="task-Container">
+      <h2>Task App</h2>
 
       {showModal && (
         <div className="modal-overlay">

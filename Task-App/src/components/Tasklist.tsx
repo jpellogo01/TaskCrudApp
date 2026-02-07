@@ -18,7 +18,6 @@ const TaskList = ({
 }: TasklistProps) => {
   return (
     <div>
-      <h4>Task Lists:</h4>
       {tasks.map((task) => (
         <TaskItem
           key={task.id}

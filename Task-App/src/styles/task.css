@@ -1,3 +1,11 @@
+.task-Container {
+        display: flex;
+        justify-Content: center;
+        align-Items: center;
+        flex-Direction: column;
+        max-Width: 320px;
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -25,6 +33,7 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  align-Self: self-start;
 }
 
 .button:hover {

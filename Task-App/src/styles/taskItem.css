@@ -1,0 +1,24 @@
+.taskItem{
+    display: flex;
+    flex-Direction: row;
+    justify-Content: space-between;
+    align-Items:center;
+    text-Align: center;
+    border: 2px solid gray;
+    border-Radius: 10px;
+    width: 300px;
+    margin-Bottom: 20px;
+    margin-Top: 20px;
+
+}
+
+.edit-button{
+    background-color: rgb(115, 96, 96);
+    width: 50px;
+    height: 40px;
+    border-Radius: 10px;
+    color:white;
+    font:500;
+    margin-Right: 5px;
+    
+}

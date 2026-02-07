@@ -1,3 +1,4 @@
+import "../styles/taskItem.css";
 interface Task {
   id: number;
   title: string;
@@ -18,19 +19,19 @@ const TaskItem = ({
   toggleStatus,
 }: TaskItemProps) => {
   return (
-    <div>
+    <div className="taskItem">
       <input
         type="checkbox"
         checked={task.completed}
         onChange={() => toggleStatus(task.id)}
       />{" "}
-      <h4>Title: {task.title}</h4>
-      <p>Status: {task.completed ? "Done" : "Pending"}</p>
+      <h4>{task.title}</h4>
       <button
         onClick={() => {
           setEditingTask(task);
           setShowModal(true);
         }}
+        className="edit-button"
       >
         edit
       </button>
